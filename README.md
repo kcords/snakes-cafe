@@ -1,6 +1,7 @@
 # LAB - Class 01
 
 Project: Snakes Cafe
+
 Author: Kyle Cordell
 
 ### How to initialize/run your application
