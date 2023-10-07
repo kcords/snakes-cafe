@@ -29,6 +29,10 @@ def prompt_diner():
 
 
 def order_item(menu_item):
+    menu_item = validate_menu_item(menu_item)
+    if menu_item is None:
+        print(strings["invalid_item"])
+        return
     count = 1 if menu_item not in ordered_items else ordered_items[menu_item] + 1
     ordered_items[menu_item] = count
     print()
@@ -37,6 +41,12 @@ def order_item(menu_item):
 
 
 ordered_items = {}
+
+def validate_menu_item(menu_item):
+    menu_item = menu_item.title()
+    for category, items in strings["menu_items"].items():
+        if menu_item in items:
+            return menu_item
 
 
 strings = {
@@ -58,7 +68,10 @@ strings = {
         "Desserts": ("Ice Cream", "Cake", "Pie"),
         "Drinks": ("Coffee", "Tea", "Unicorn Tears")
     },
-    "confirmation": "** {} order{} of {} has been added to your meal **"
+    "confirmation": "** {} order{} of {} has been added to your meal **",
+    "invalid_item": """
+Not a valid menu item, please order something else.
+"""
 }
 
 
