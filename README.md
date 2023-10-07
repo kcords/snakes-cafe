@@ -3,26 +3,13 @@
 Project: Snakes Cafe
 Author: Kyle Cordell
 
-### Links and Resources
+### How to initialize/run your application
 
-back-end server url (when applicable)
-front-end application (when applicable)
-
-### Setup
-
-.env requirements (where applicable)
-i.e.
-
-PORT - Port Number
-DATABASE_URL - URL to the running Postgres instance/db
-
-
-How to initialize/run your application (where applicable)
-e.g. python main.py
-How to use your library (where applicable)
+1. Navigate to the application root directory
+2. Input `python3 main.py` to start the application
+3. Add items listed to your order
+4. Type `quit` to exit the application
 
 ### Tests
 
-How do you run tests?
-Any tests of note?
-Describe any tests that you did not complete, skipped, etc
+There are no automated tests currently. You can manually test that invalid options are not allowed by adding an item that is not included on the menu.
