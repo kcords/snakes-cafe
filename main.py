@@ -11,7 +11,11 @@ def offer_menu():
 
 
 def print_menu_items():
-    pass
+    for category, category_items in strings["menu_items"].items():
+        print()
+        print(category)
+        print("-" * len(category))
+        [print(menu_item) for menu_item in category_items]
 
 
 def prompt_diner():
