@@ -37,10 +37,17 @@ strings = {
 **************************************
 """,
     "order_prompt": """
-    ***********************************
+***********************************
 ** What would you like to order? **
 ***********************************
-"""
+""",
+    "menu_items": {
+        "Appetizers": ("Wings", "Cookies", "Spring Rolls"),
+        "Entrees": ("Salmon", "Steak", "Meat Tornado", "A Literal Garden"),
+        "Desserts": ("Ice Cream", "Cake", "Pie"),
+        "Drinks": ("Coffee", "Tea", "Unicorn Tears")
+    },
+    "confirmation": "{} order{} of {} has been added to your meal"
 }
 
 
