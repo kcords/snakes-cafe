@@ -25,10 +25,18 @@ def prompt_diner():
         if ordered == 'quit':
             order_active = False
             break
+        order_item(ordered)
 
 
-def order_item():
-    pass
+def order_item(menu_item):
+    count = 1 if menu_item not in ordered_items else ordered_items[menu_item] + 1
+    ordered_items[menu_item] = count
+    print()
+    print(strings["confirmation"].format(count, "s" if count > 1 else "", menu_item))
+    print()
+
+
+ordered_items = {}
 
 
 strings = {
@@ -38,8 +46,7 @@ strings = {
 **    Please see our menu below.    **
 **
 ** To quit at any time, type "quit" **
-**************************************
-""",
+**************************************""",
     "order_prompt": """
 ***********************************
 ** What would you like to order? **
@@ -51,7 +58,7 @@ strings = {
         "Desserts": ("Ice Cream", "Cake", "Pie"),
         "Drinks": ("Coffee", "Tea", "Unicorn Tears")
     },
-    "confirmation": "{} order{} of {} has been added to your meal"
+    "confirmation": "** {} order{} of {} has been added to your meal **"
 }
 
 
